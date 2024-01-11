@@ -24,3 +24,8 @@ Still, it has been keeping my small home lab cool for over two years now.
 ## Setup
 
 ![Fritzing showing how all parts are connected](logical_schematic.png)
+
+## Building
+
+Copy `include/config.example.h` to `include/config.h` and set WiFi parameters, as well as the MQTT server.
+The rest is the usual PlatformIO workflow.
