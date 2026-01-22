@@ -28,7 +28,10 @@ void reconnectNetwork() {
 
     Serial.print("Connecting to network");
     while (WiFi.status() != WL_CONNECTED) {
-      delay(1000);
+        WiFi.disconnect();
+        delay(500);
+        WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+        delay(500);
         Serial.print(".");
     }
     Serial.println("!");
